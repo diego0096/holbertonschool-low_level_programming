@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char t, r, u;
+int t, r, u;
 t = 0;
 while (t < 100)
 {
