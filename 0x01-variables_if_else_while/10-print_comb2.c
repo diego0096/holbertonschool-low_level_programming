@@ -7,7 +7,7 @@
 int main(void)
 {
 int t, r, u;
-for (t > 0; t < 100; t++)
+for (t = 0; t < 100; t++)
 {
 r = t / 10;
 u = t % 10;
