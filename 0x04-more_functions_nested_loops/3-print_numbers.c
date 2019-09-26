@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * print_numbers - check the code for Holberton School students.
  *
- * Return: Always 0.
+ * Description: Print 0 to 9.
  */
 void print_numbers(void)
 {
