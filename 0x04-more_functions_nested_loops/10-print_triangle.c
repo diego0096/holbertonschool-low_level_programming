@@ -1,13 +1,37 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * print_triangle - check the code for Holberton School students.
  *
+ * @size: int type
  * Return: Always 0.
  */
-void print_triangle(int size);
+void print_triangle(int size)
 {
-int c;
-int d;
-int e;
+	int c;
+	int d;
+	int e;
 
+	for (c = 0 ; c < size ; c++)
+	{
+		e = size - c;
+		for (d = 1 ; d <= size ; d++)
+		{
+			if (d < e)
+			{
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('#');
+			}
+		}
 
+		if (size <= 0)
+		{
+			_putchar('\n');
+			return;
+		}
+	_putchar('\n');
+
+	}
+}
