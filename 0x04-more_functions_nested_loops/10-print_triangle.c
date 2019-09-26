@@ -11,6 +11,11 @@ void print_triangle(int size)
 	int d;
 	int e;
 
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
 	for (c = 0 ; c < size ; c++)
 	{
 		e = size - c;
