@@ -20,6 +20,7 @@ char *s;
 	for (a = 0 ; s1[a] != '\0' ; a++)
 	;
 	for (b = 0 ; s2[b] != '\0' ; b++)
+	;
 	size = a + b + 1;
 	s = (char *) malloc(size * sizeof(char));
 	if (s == NULL)
