@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_node - check the code for Holberton School students.
+ * add_node - function to add a node at the beginnig
  *
  * @head: double pointer of list_t struc type.
  * @str: pointer of the string input
