@@ -7,7 +7,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	int a;
+	size_t a;
 
 	for (a = 0 ; h != NULL ; a++)
 	{
