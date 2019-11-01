@@ -1,7 +1,9 @@
 #include "lists.h"
 /**
- * main - check the code for Holberton School students.
+ * add_node_end - check the code for Holberton School students.
  *
+ * @head: double pointer of list_t struct type.
+ * @str: pointer to string input.
  * Return: Always 0.
  */
 list_t *add_node_end(list_t **head, const char *str)
@@ -10,7 +12,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *f;
 	unsigned int c;
 
-	for (c = 0 ; str[c] != NULL ; c++)
+	for (c = 0 ; str[c] != '\0' ; c++)
 	{
 
 	}
@@ -19,4 +21,19 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	f->str = strdup(str);
 	f->len = c;
+	if (*head == NULL)
+	{
+		*head = f;
+		f->next = NULL;
+		return (*head);
+	}
+	t = *head;
+	while (t->next != NULL)
+	{
+		t = t->next;
+	}
+	t->next = f;
+	f->next = NULL;
 
+	return (*head);
+}
