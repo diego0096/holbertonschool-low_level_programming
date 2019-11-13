@@ -7,8 +7,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fsd;
-	ssize_t fread, fwrite, fclose;
+	int f;
+	ssize_t frd, fwr, fcl;
 	char *space;
 
 	if (filename == NULL)
@@ -18,17 +18,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (-1);
 	}
-	fsd = open(filename, O_RDONLY);
-	if (fsd == -1)
+	f = open(filename, O_RDONLY);
+	if (f == -1)
 		return (0);
-	fread = read(fsd, space, letters);
-	if (fread == -1)
+	frd = read(f, space, letters);
+	if (frd == -1)
 		return (-1);
-	fwrite = write(STDOUT_FILENO, space, fread);
-	if (fwrite == -1)
+	fwr = write(STDOUT_FILENO, space, frd);
+	if (fwr == -1)
 		return (-1);
-	fclose = close(fsd);
-	if (fclose == -1)
+	fcl = close(f);
+	if (fcl == -1)
 		return (-1);
-	return (fread);
+	return (frd);
 }
